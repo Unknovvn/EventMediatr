@@ -1,5 +1,5 @@
 {
-  "name": "eventmediatr",
+  "name": "@unknovvn/eventmediatr",
   "type": "module",
   "version": "1.0.0",
   "description": "Mediatr implementation based on event emitter",

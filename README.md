@@ -3,7 +3,7 @@ EventMediatr is minimal implementation of MediatR pattern based on eventEmitter
 ## Install
 
 ```
-$ npm install eventMediatr
+$ npm install @unknovvn/eventmediatr
 ```
 
 ## Usage
