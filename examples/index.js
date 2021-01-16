@@ -1,14 +1,7 @@
-EventMediatr is minimal implementation of MediatR pattern based on eventEmitter
+import EventMediatr from "../src/EventMediatr.js";
+import AsyncHandler from "./AsyncHandler.js";
+import SyncHandler from "./SyncHandler.js";
 
-## Install
-
-```
-$ npm install eventMediatr
-```
-
-## Usage
-
-```js
 export default class AsyncHandler {
   constructor() {}
 
@@ -44,8 +37,3 @@ eventMediatr.registerSyncHandler("sync", syncHandler);
 
 eventMediatr.publish("async", {});
 eventMediatr.publish("sync", {});
-```
-
-## License
-
-MIT © Andžej Korovacki
