@@ -1,5 +1,6 @@
 {
   "name": "@unknovvn/eventmediatr",
+  "main": "./src/EventMediatr.js",
   "type": "module",
   "version": "1.0.0",
   "description": "Mediatr implementation based on event emitter",
