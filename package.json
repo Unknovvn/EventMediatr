@@ -1,8 +1,8 @@
 {
   "name": "@unknovvn/eventmediatr",
-  "main": "./src/EventMediatr.js",
+  "main": "./src/EventMediatr",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mediatr implementation based on event emitter",
   "directories": {
     "example": "examples"
@@ -12,8 +12,9 @@
     "url": "git+https://github.com/Unknovvn/EventMediatr.git"
   },
   "keywords": [
-    "Mediatr",
-    "event emitter"
+    "MediatR",
+    "eventEmitter",
+    "CQRS"
   ],
   "author": "Andžej Korovacki <Andrzej.Korovacki@gmail.com>",
   "license": "MIT",

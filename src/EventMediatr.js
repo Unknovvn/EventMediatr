@@ -1,6 +1,6 @@
 import { EventEmitter } from "events";
 
-export default class EventMediatr {
+class EventMediatr {
   #emitter;
 
   /**
@@ -57,3 +57,5 @@ export default class EventMediatr {
     return eventNames.includes(requestType);
   }
 }
+
+export default EventMediatr;
