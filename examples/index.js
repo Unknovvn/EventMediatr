@@ -1,8 +1,6 @@
-import EventMediatr from "../src/EventMediatr.js";
-import AsyncHandler from "./AsyncHandler.js";
-import SyncHandler from "./SyncHandler.js";
+import EventMediatr from "../lib/EventMediatr.js";
 
-export default class AsyncHandler {
+class AsyncHandler {
   constructor() {}
 
   handle = async () => {
@@ -16,7 +14,7 @@ export default class AsyncHandler {
   };
 }
 
-export default class SyncHandler {
+class SyncHandler {
   constructor() {}
 
   handle = () => {
