@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "@unknovvn/eventmediatr",
   "description": "Mediatr implementation based on event emitter",
   "author": "Andžej Korovacki <Andrzej.Korovacki@gmail.com>",
