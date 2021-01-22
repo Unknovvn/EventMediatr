@@ -4,7 +4,7 @@
   "description": "Mediatr implementation based on event emitter",
   "author": "Andžej Korovacki <Andrzej.Korovacki@gmail.com>",
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "./lib/EventMediatr.js",
   "type": "module",
   "scripts": {
     "build": "tsc -p ."
