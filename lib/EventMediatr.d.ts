@@ -3,8 +3,24 @@ import ISyncHandler from "./ISyncHandler";
 export default class EventMediatr {
     private emitter;
     constructor();
+    /**
+     * Method to publish request to mediatr
+     * @param {string} requestName request name
+     * @param {object} request request object (command/query)
+     * @returns anything that request handler handle method returns
+     */
     publish: <TRequest, TResponse>(requestName: string, request: TRequest) => Promise<TResponse>;
+    /**
+     * method to register handlers with asynchronous handle method
+     * @param {string} requestName request name to map request publishing with correct handler
+     * @param {object} handler handler object with handle method
+     */
     registerHandler: <TRequest, TResponse>(requestName: string, handler: IHandler<TRequest, TResponse>) => void;
+    /**
+     * method to register handlers with synchronous handle method
+     * @param {string} requestName request name to map request publishing with correct handler
+     * @param {object} handler handler object with handle method
+     */
     registerSyncHandler: <TRequest, TResponse>(requestName: string, handler: ISyncHandler<TRequest, TResponse>) => void;
     private eventIsListened;
 }
