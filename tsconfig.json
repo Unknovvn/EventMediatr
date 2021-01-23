@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "module": "ES6",
-    "lib": ["ES2019", "DOM"],
     "declaration": true,
     "outDir": "lib",
     "rootDir": "src",

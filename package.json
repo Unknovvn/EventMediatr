@@ -1,11 +1,10 @@
 {
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "@unknovvn/eventmediatr",
   "description": "Mediatr implementation based on event emitter",
   "author": "Andžej Korovacki <Andrzej.Korovacki@gmail.com>",
   "license": "MIT",
   "main": "./lib/EventMediatr.js",
-  "type": "module",
   "scripts": {
     "build": "tsc -p ."
   },
