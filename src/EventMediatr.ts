@@ -5,8 +5,9 @@ import ISyncHandler from "./ISyncHandler";
 export default class EventMediatr {
   private emitter: EventEmitter;
 
-  constructor() {
+  constructor(maxListenersCount?: number) {
     this.emitter = new EventEmitter();
+    this.emitter.setMaxListeners(maxListenersCount ? maxListenersCount : 0);
   }
 
   /**
