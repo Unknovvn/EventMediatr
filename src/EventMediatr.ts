@@ -12,13 +12,37 @@ export default class EventMediatr {
 
   /**
    * Method to publish request to mediatr
+   * @param {object} request request object (command/query)
+   * @returns anything that request handler handle method returns
+   */
+  publish = async <TResponse>(request: object): Promise<TResponse> => {
+    if (typeof request !== "object" || request.constructor === undefined) {
+      throw new Error("Request should have a constructor");
+    }
+
+    const requestName = request.constructor.name;
+    if (!this.eventIsListened(requestName)) {
+      throw new Error(
+        `There is no handler registered for request: ${requestName}`
+      );
+    }
+
+    return await new Promise((resolve) => {
+      this.emitter.emit(requestName, request, (result: TResponse) =>
+        resolve(result)
+      );
+    });
+  };
+
+  /**
+   * Method to publish request to mediatr
    * @param {string} requestName request name
    * @param {object} request request object (command/query)
    * @returns anything that request handler handle method returns
    */
-  publish = async <TRequest, TResponse>(
+  publishByName = async <TResponse>(
     requestName: string,
-    request: TRequest
+    request: object
   ): Promise<TResponse> => {
     if (!this.eventIsListened(requestName)) {
       throw new Error(
