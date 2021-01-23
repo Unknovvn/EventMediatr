@@ -1,4 +1,4 @@
-import EventMediatr from "../lib/EventMediatr.js";
+const EventMediatr = require("../lib/EventMediatr.js").default;
 
 class AsyncHandler {
   constructor() {}
